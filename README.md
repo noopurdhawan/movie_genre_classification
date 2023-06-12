@@ -35,3 +35,6 @@ Use a tool like curl to send a POST request to the API endpoint:
 ```curl -d '{"overview":"A movie about penguins in Antarctica building a spaceship to go to Mars."}' -H "Content-Type: application/json" -X POST http://localhost:8000```
 
 The response should contain the predicted genre in JSON format.
+
+Or Run `sh install.sh` on the terminal which would set the localhost on port 8080. 
+   Please make sure that port 8080 is not in use.
