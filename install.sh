@@ -10,6 +10,6 @@ echo "Preprocess and Train the Data..."
 python3 model.py
 
 echo "Setting up API on LocalHost using Flask.."
-python3 app.py
+python3 predict.py
 
 
