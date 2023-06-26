@@ -23,7 +23,7 @@ To run the file locally install `pip install jupyter-lab` and on terminal comman
     * Save the Model in the model folder
 
 ## Getting Started
-These instructions will guide on how to set up and run the movie genre classification service.
+These instructions will guide how to set up and run the movie genre classification service.
 1. Cloning a repository: `git clone https://github.com/noopurdhawan/movie_genre_classification.git`
 2. Go to the folder using `cd <folder_name>`
 
@@ -53,7 +53,7 @@ Install the required Python packages by running the following command.
 4. Preprocess the Data and Train the Model using `python model.py`
 
 5. Run the Service Locally  on the terminal
-Start the Flask application by running the following command `python app.py`:
+Start the Flask application by running the following command `python predict.py`:
 The service should now be running on http://localhost:8000.
 
 6. Test the API using the below curl 
