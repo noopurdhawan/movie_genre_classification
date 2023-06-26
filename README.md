@@ -28,8 +28,8 @@ These instructions will guide how to set up and run the movie genre classificati
 2. Go to the folder using `cd <folder_name>`
 
 * Option 1 to run the Model as a Service:
-1. Run `sh install.sh` on the terminal which would set the localhost on port 8080. 
-   Please make sure that port 8080 is not in use.
+1. Run `sh install.sh` on the terminal which would set the localhost on port 8000. 
+   Please make sure that port 8000 is not in use.
 
 
 * Option 2: To Re-train the Model
