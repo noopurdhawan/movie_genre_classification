@@ -1,13 +1,18 @@
-from flask import Flask, request, jsonify
 import pickle
+import sys
 import numpy as np
+from flask import Flask, request, jsonify
+
+try:
+    # load the model files
+    model = pickle.load(open("model/log_model.pkl", 'rb'))
+    mlb = pickle.load(open('model/mlb.pkl', 'rb'))
+    tfidf_vect = pickle.load(open('model/tfidf_vectorizer.pkl', 'rb'))
+except:
+    print("Error loading application. Please run `python model.py` first!")
+    sys.exit(0)
 
 app = Flask(__name__)
-
-# load the model files
-model = pickle.load(open("model/log_model.pkl", 'rb'))
-mlb = pickle.load(open('model/mlb.pkl', 'rb'))
-tfidf_vect = pickle.load(open('model/tfidf_vectorizer.pkl', 'rb'))
 
 
 @app.route('/', methods=['POST'])
@@ -24,8 +29,8 @@ def predict_genre():
     except:
         # Set the status code 400 if Bad Request
         status = 400
-        data = [{'message': 'Bad Request'}]
+        return jsonify({'status': status, 'message': 'Bad Request'})
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000)
+    app.run(host='0.0.0.0',port=8000)
